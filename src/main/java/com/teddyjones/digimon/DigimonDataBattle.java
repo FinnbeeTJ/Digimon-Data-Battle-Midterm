@@ -1,3 +1,5 @@
+package com.teddyjones.digimon;
+
 import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.LinkedList;
@@ -39,6 +41,7 @@ public class DigimonDataBattle {
      * ArrayLists are fast for adding and fast for removing from the end.
      */
     public static void veemonArrayListAttack() {
+        System.out.println("The battle begins!"); // <-- ADDED THIS LINE
         System.out.println("--- Veemon's Turn: ArrayList ---");
         ArrayList<Integer> dataList = new ArrayList<>();
         long startTime, endTime;
@@ -69,7 +72,8 @@ public class DigimonDataBattle {
      * LinkedLists are also fast for adding and removing from the ends.
      */
     public static void wormmonLinkedListAttack() {
-        System.out.println("\n--- Wormmon's Turn: LinkedList ---");
+        System.out.println("\nThe battle begins!"); // <-- ADDED THIS LINE
+        System.out.println("--- Wormmon's Turn: LinkedList ---");
         LinkedList<Integer> dataList = new LinkedList<>();
         long startTime, endTime;
 
@@ -99,7 +103,8 @@ public class DigimonDataBattle {
      * Hashtables use a key-value system and are very fast for lookups, adds, and removes.
      */
     public static void patamonHashtableAttack() {
-        System.out.println("\n--- Patamon's Turn: Hashtable ---");
+        System.out.println("\nThe battle begins!"); // <-- ADDED THIS LINE
+        System.out.println("--- Patamon's Turn: Hashtable ---");
         Hashtable<Integer, Integer> dataTable = new Hashtable<>();
         long startTime, endTime;
 
