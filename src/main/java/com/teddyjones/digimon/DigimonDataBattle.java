@@ -17,7 +17,9 @@ public class DigimonDataBattle {
     // The number of integers to add and delete, representing the digital data packets.
     private static final int DATA_PACKETS = 2_000_000;
     private static final Random randomGenerator = new Random();
-
+    public static String getWelcomeMessage() {
+        return "Welcome to the Digital World Battle Arena!";
+    }
     /**
      * The main method, serving as the Digital World's battle arena.
      */
