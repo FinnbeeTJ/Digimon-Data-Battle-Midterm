@@ -1,19 +1,25 @@
 pipeline {
     agent any
 
+    tools {
+        // This tells Jenkins to use the Maven tool you have configured
+        // in Manage Jenkins > Global Tool Configuration.
+        // You might need to adjust the name 'Maven' if yours is different.
+        maven 'Maven'
+    }
+
     stages {
         stage('Checkout') {
             steps {
-                // This step is handled automatically when we configure the job later.
-                // It will check out the code from GitHub.
-                echo 'Checking out code...'
+                // This is the standard way to check out the code
+                // using the repository URL from the job's configuration.
+                checkout scm
             }
         }
         stage('Build & Test') {
             steps {
-                // This single Maven command compiles the code,
-                // runs your JUnit tests, and packages it all into a .jar file.
-                sh 'mvn clean package'
+                // Using 'bat' for Windows. Use 'sh' if Jenkins is on Linux/macOS.
+                bat 'mvn clean package'
             }
         }
     }
